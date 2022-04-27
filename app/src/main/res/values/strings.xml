@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">QRCode_AppDev</string>
+    <string name="action_scan">quét</string>
+    <string name="action_create">Tạo</string>
+    <string name="action_history">Lịch sử</string>
+    <string name="action_setting">Cài đặt</string>
 </resources>
