@@ -8,6 +8,8 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,19 +23,18 @@ import java.util.concurrent.Executors;
 
 public class bottom_dialog extends BottomSheetDialogFragment {
 
-    private TextView title, link, btn_visit;
+    private TextView title;
     private ImageView close;
     private String fetchUrl;
+    private Button btnBack,btn_visit;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_dialog, container, false);
-
-        title = view.findViewById(R.id.txt_title);
-        link = view.findViewById(R.id.txt_link);
-        btn_visit = view.findViewById(R.id.visit);
-        close = view.findViewById(R.id.close);
+        title = view.findViewById(R.id.txt_url_result);
+        btn_visit = view.findViewById(R.id.btn_open_browser);
+        btnBack = view.findViewById(R.id.btnBack);
 
         title.setText(fetchUrl);
 
@@ -42,10 +43,21 @@ public class bottom_dialog extends BottomSheetDialogFragment {
             intent.setData(Uri.parse(fetchUrl));
             startActivity(intent);
         });
-
-        close.setOnClickListener(view1 -> dismiss());
+        btnBack.setOnClickListener(view1 -> dismiss());
         return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    }
+
+//    @Override
+//    public void onDetach() {
+//        super.onDetach();
+//        requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//    }
 
     public void fetchUrl(String url) {
         ExecutorService executorService = Executors.newSingleThreadExecutor();

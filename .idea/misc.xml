@@ -5,16 +5,27 @@
       <map>
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_1.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_2.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_camera.xml" value="0.1925" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_circle.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_fragment.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_arrow_back.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_background_camera.xml" value="0.1925" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_browser.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flash_off.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flash_on.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flashlight_on.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_link.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library.xml" value="0.2995" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library_white.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_share.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/font/main_font.xml" value="0.3223599828986746" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/background_button.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/bottom_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.1513467293715263" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history.xml" value="0.1513467293715263" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_qrcodescan.xml" value="0.15220179563916203" />

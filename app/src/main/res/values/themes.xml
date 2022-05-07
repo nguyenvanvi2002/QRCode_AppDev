@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.QRCode_AppDev" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimary">#E8E8E8</item>
         <item name="colorPrimaryVariant">@color/main_color</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Button.Main" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">@color/main_color</item>
     </style>
 </resources>
