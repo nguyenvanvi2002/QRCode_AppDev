@@ -16,6 +16,7 @@ import android.util.Size;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -57,7 +58,7 @@ public class QrScanFragment extends Fragment {
     private ExecutorService cameraExecutor;
     public PreviewView previewView;
     private MyImageAnalyzer analyzer;
-    private ImageView btnFlashOn, btnFlashOff, btnPhotoGallery;
+    private Button btnFlash, btnPhoto_library;
     private boolean lightOn = false;
 
     @SuppressWarnings("deprecation")
@@ -68,16 +69,11 @@ public class QrScanFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_scan, container, false);
         previewView = view.findViewById(R.id.previewView);
 
-        btnFlashOn = view.findViewById(R.id.btn_flash_on);
-        btnFlashOn.setClickable(true);
-        btnFlashOn.setVisibility(View.VISIBLE);
 
-        btnFlashOff = view.findViewById(R.id.btn_flash_off);
-        btnFlashOff.setClickable(false);
-        btnFlashOff.setVisibility(View.GONE);
+        btnFlash = view.findViewById(R.id.flash);
 
-        btnPhotoGallery = view.findViewById(R.id.btn_gallery);
-        btnPhotoGallery.setOnClickListener(view1 -> startActivityForResult(new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI), GET_FROM_GALLERY));
+        btnPhoto_library = view.findViewById(R.id.btnPhoto_library);
+        btnPhoto_library.setOnClickListener(view1 -> startActivityForResult(new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI), GET_FROM_GALLERY));
 
         cameraExecutor = Executors.newSingleThreadExecutor();
         cameraProviderFuture = ProcessCameraProvider.getInstance(requireActivity());
@@ -171,30 +167,14 @@ public class QrScanFragment extends Fragment {
 
         Camera camera = processCameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture, imageAnalysis);
 
-        btnFlashOn.setOnClickListener(view1 -> {
-            if ( camera.getCameraInfo().hasFlashUnit() ) {
+        btnFlash.setOnClickListener(view -> {
+            if (camera.getCameraInfo().hasFlashUnit()) {
                 camera.getCameraControl().enableTorch(!lightOn);
                 lightOn = !lightOn;
-                btnFlashOn.setVisibility(View.GONE);
-                btnFlashOn.setClickable(false);
-                btnFlashOff.setVisibility(View.VISIBLE);
-                btnFlashOff.setClickable(true);
-            } else {
+            }else{
                 Toast.makeText(getActivity(), "Your phone doesn't have a flash light", Toast.LENGTH_SHORT).show();
             }
 
-        });
-        btnFlashOff.setOnClickListener(view -> {
-            if ( camera.getCameraInfo().hasFlashUnit() ) {
-                camera.getCameraControl().enableTorch(!lightOn);
-                lightOn = !lightOn;
-                btnFlashOn.setVisibility(View.VISIBLE);
-                btnFlashOn.setClickable(true);
-                btnFlashOff.setVisibility(View.GONE);
-                btnFlashOff.setClickable(false);
-            } else {
-                Toast.makeText(getActivity(), "Your phone doesn't have a flash light", Toast.LENGTH_SHORT).show();
-            }
         });
 
         previewView.setImplementationMode(PreviewView.ImplementationMode.COMPATIBLE);

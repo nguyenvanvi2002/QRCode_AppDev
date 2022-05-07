@@ -10,4 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="system">#C4C4C4</color>
     <color name="main_color">#D15ABE</color>
+    <color name="select_color">#D68FCB</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>

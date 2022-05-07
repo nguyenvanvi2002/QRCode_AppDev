@@ -17,6 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/previewView" >
+
+
         </androidx.camera.view.PreviewView>
 
         <RelativeLayout
@@ -25,11 +27,11 @@
 
             <TextView
                 android:id="@+id/view1"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@+id/image"
-                android:background="@color/black_transparent" />
+                android:background="@color/black_transparent"
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/view2"
@@ -37,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/image"
-                android:background="@color/black_transparent" />
+                android:background="@color/black_transparent"/>
 
             <TextView
                 android:id="@+id/view3"
@@ -47,63 +49,54 @@
                 android:layout_toLeftOf="@+id/image"
                 android:layout_above="@id/view2"
                 android:layout_below="@id/view1"
-                android:background="@color/black_transparent" />
+                android:background="@color/black_transparent"/>
+
             <TextView
                 android:id="@+id/view4"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_toRightOf="@+id/image"
                 android:layout_above="@id/view2"
                 android:layout_below="@id/view1"
-                android:background="@color/black_transparent" />
+                android:layout_toRightOf="@+id/image"
+                android:background="@color/black_transparent"
+                android:gravity="center" />
+
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/crop" />
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:src="@drawable/icon_scan" />
+
+            <Button
+                android:id="@+id/flash"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_flashlight_on"
+                android:fontFamily="arial"
+                android:text="Đèn pin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold"
+                app:iconPadding="0dp"
                 android:layout_above="@+id/image"
                 android:layout_alignEnd="@+id/image"
-                android:layout_marginBottom="100dp"
-                app:cardCornerRadius="10dp">
-                <ImageView
-                    android:id="@+id/btn_flash_on"
-                    android:radius="100dp"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:background="@color/main_color"
-                    android:src="@drawable/ic_flash_on" />
-                <ImageView
-                    android:id="@+id/btn_flash_off"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_flash_off"
-                    android:layout_above="@+id/image"
-                    android:layout_alignStart="@+id/image"
-                    android:layout_marginBottom="100dp"
-                    android:visibility="gone"/>
+                android:layout_marginBottom="80dp"
+                />
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnPhoto_library"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_photo_library"
+                android:fontFamily="arial"
+                android:text="Thư viện"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold"
+                app:iconPadding="0dp"
                 android:layout_above="@+id/image"
                 android:layout_alignStart="@+id/image"
-                android:layout_marginBottom="100dp"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/btn_gallery"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:background="@color/main_color"
-                    android:src="@drawable/ic_photo_library" />
-            </androidx.cardview.widget.CardView>
+                android:layout_marginBottom="80dp"
+                />
 
         </RelativeLayout>
 
