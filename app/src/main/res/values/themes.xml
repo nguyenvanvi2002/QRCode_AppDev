@@ -16,5 +16,6 @@
     </style>
     <style name="Button.Main" parent="ThemeOverlay.AppCompat">
         <item name="colorPrimary">@color/main_color</item>
+        <item name="colorAccent">@android:color/black</item>
     </style>
 </resources>
