@@ -85,10 +85,11 @@ public class QrScanFragment extends Fragment {
             try {
                 if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.CAMERA) != (PackageManager.PERMISSION_GRANTED)) {
                     ActivityCompat.requestPermissions(requireActivity(), new String[] {Manifest.permission.CAMERA}, 101);
-                }else {
-                    ProcessCameraProvider processCameraProvider = cameraProviderFuture.get();
-                    bindPreview(processCameraProvider);
                 }
+                ProcessCameraProvider processCameraProvider = cameraProviderFuture.get();
+                bindPreview(processCameraProvider);
+
+
 
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
