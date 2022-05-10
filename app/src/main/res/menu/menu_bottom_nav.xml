@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/qrscan"
+        android:id="@+id/action_scan"
         android:title="@string/action_scan"
         android:icon="@drawable/baseline_qr_code_scanner_white_24dp"/>
 
     <item
-        android:id="@+id/create"
+        android:id="@+id/action_create"
         android:title="@string/action_create"
         android:icon="@drawable/baseline_grid_view_white_24dp"/>
 
     <item
-        android:id="@+id/history"
+        android:id="@+id/action_history"
         android:title="@string/action_history"
         android:icon="@drawable/baseline_history_white_24dp"/>
 
     <item
-        android:id="@+id/setting"
+        android:id="@+id/action_setting"
         android:title="@string/action_setting"
         android:icon="@drawable/baseline_settings_white_24dp"/>
 </menu>
