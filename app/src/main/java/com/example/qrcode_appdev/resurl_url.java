@@ -1,10 +1,8 @@
 package com.example.qrcode_appdev;
 
 
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,7 +24,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class bottom_dialog extends BottomSheetDialogFragment {
+public class resurl_url extends BottomSheetDialogFragment {
 
     private TextView title;
     private ImageView close, btn_visit,btn_share;
@@ -37,7 +35,7 @@ public class bottom_dialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.bottom_dialog, container, false);
+        View view = inflater.inflate(R.layout.result_url, container, false);
         title = view.findViewById(R.id.txt_url_result);
         btn_visit = view.findViewById(R.id.btn_open_browser);
         btnBack = view.findViewById(R.id.btnBack);
