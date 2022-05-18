@@ -109,7 +109,6 @@ public class QrScanFragment extends Fragment {
             } catch ( InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
-            bindPreview(Objects.requireNonNull(processCameraProvider));
         }
 
     }
@@ -169,12 +168,7 @@ public class QrScanFragment extends Fragment {
         Camera camera = processCameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture, imageAnalysis);
 
         btnFlash.setOnClickListener(view -> {
-            if (camera.getCameraInfo().hasFlashUnit()) {
-                camera.getCameraControl().enableTorch(!lightOn);
-                lightOn = !lightOn;
-            }else{
-                Toast.makeText(getActivity(), "Your phone doesn't have a flash light", Toast.LENGTH_SHORT).show();
-            }
+            processCameraProvider.unbindAll();
 
         });
 
@@ -254,5 +248,30 @@ public class QrScanFragment extends Fragment {
                 }
             }
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        ProcessCameraProvider processCameraProvider = null;
+        try {
+            processCameraProvider = cameraProviderFuture.get();
+        } catch ( InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+        processCameraProvider.unbindAll();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ProcessCameraProvider processCameraProvider = null;
+        try {
+            processCameraProvider = cameraProviderFuture.get();
+        } catch ( InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        bindPreview(Objects.requireNonNull(processCameraProvider));
     }
 }
