@@ -1,6 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:layout_marginTop="36dp"
+        />
 
-</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBack"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/background_fragment"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/title_qr_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:text="Email"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_qr_email"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Đến:"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/title_email_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_email_address"
+            android:layout_marginLeft="40dp"
+            android:text="chủ đề:"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/title_email_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_email_subject"
+            android:layout_marginLeft="40dp"
+            android:text="Nội dung:"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_qr_email"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/title_email_address"
+            android:text="email_address"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/email_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_address"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/title_email_subject"
+            android:text="email_subject"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/email_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_subject"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/title_email_content"
+            android:text="email_content"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/btn_copy"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/email_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_button_corner_1"
+            android:gravity="center"
+            android:text="@string/txt_copy"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_copy"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_send_email"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@drawable/background_button_corner_2"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_email_white"
+                app:iconPadding="0dp" />
+
+            <TextView
+                android:id="@+id/tv_open_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_send_email"
+                android:layout_alignStart="@id/btn_send_email"
+                android:layout_alignEnd="@id/btn_send_email"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/send_email"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_share"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/btn_send_email"
+                android:background="@drawable/background_button_corner_2"
+                android:padding="5dp"
+                android:src="@drawable/ic_share_white" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_share"
+                android:layout_alignStart="@id/btn_share"
+                android:layout_alignEnd="@id/btn_share"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/url_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frame_show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/background_circle"
+        android:padding="20dp"
+        android:src="@drawable/ic_email" />
+
+</RelativeLayout>

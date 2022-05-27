@@ -6,6 +6,11 @@
     <string name="action_setting">Cài đặt</string>
     <string name="url_link_result"><u>URL link</u></string>
     <string name="txt_copy">Sao chép</string>
-    <string name="txt_share">Chia sẻ</string>
-    <string name="txt_open_browser">Mở trình duyệt</string>
+    <string name="share">Chia sẻ</string>
+    <string name="open_browser">Mở trình duyệt</string>
+    <string name="send_email">Gửi email</string>
+    <string name="send_sms">Gửi sms</string>
+    <string name="phone_call">Gọi điện</string>
+    <string name="located">Vị trí</string>
+    <string name="add_contact">Thêm vào liên hệ</string>
 </resources>

@@ -9,10 +9,11 @@
     <color name="black_transparent">#80000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="system">#C4C4C4</color>
-    <color name="main_color">#D15ABE</color>
-    <color name="select_color">#D68FCB</color>
-    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="main_color">#FF6155</color>
+    <color name="background_main_color">#CBFF6155</color>
+    <color name="select_color">#FF9991</color>
     <color name="background_color">#E8E8E8</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
     <color name="shadow_color">#1C1C1C</color>
     <color name="select_white">#BFBFBF</color>
 </resources>

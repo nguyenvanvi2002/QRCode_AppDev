@@ -13,8 +13,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="30dp"/>
+        android:layout_margin="20dp"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,11 +45,11 @@
             android:id="@+id/text_create"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_text"
-            android:padding="25dp"
-            android:background="@drawable/background_button_corner_3"
+            android:layout_marginLeft="50dp"
             android:layout_toRightOf="@+id/url_create"
-            android:layout_marginLeft="50dp"/>
+            android:background="@drawable/background_button_corner_3"
+            android:padding="25dp"
+            android:src="@drawable/ic_text" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +67,7 @@
             android:id="@+id/wifi_create"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_wifi"
+            android:src="@drawable/ic_wifi_maincolor"
             android:padding="25dp"
             android:background="@drawable/background_button_corner_3"
             android:layout_toRightOf="@id/text_create"

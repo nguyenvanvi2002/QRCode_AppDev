@@ -15,27 +15,53 @@
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_arrow_back.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_background_camera.xml" value="0.1925" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_browser.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_card.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_contact.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_copy.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_crop_scan.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_email.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_event.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flash_off.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flash_on.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_flashlight_on.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_headphones.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_link.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_phone.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library.xml" value="0.2995" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library_white.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_public.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_search.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_share.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_sms.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_text.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_url.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_vibration.xml" value="0.204" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_wifi.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/font/main_font.xml" value="0.3223599828986746" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/background_button.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.22" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history.xml" value="0.1513467293715263" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/contact_scan_result.xml" value="0.2932877297990594" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/email_scan_result.xml" value="0.2932877297990594" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history.xml" value="0.25" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_qrcodescan.xml" value="0.15220179563916203" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_scan.xml" value="0.33" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_setting.xml" value="0.13980333475844378" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact.xml" value="0.19990933816863102" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/history_create.xml" value="0.2860196665241556" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/history_scan.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact.xml" value="0.33" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_email.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_text.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_wifi.xml" value="0.19990933816863102" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_event.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_phone_number.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_sms.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_text.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_url.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_wifi.xml" value="0.33" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/text_scan_result.xml" value="0.2932877297990594" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/url_scan_result.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/wifi_scan_result.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.149" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />

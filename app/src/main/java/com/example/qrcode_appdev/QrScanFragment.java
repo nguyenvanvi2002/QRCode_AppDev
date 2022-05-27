@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,6 +43,7 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
@@ -165,7 +167,12 @@ public class QrScanFragment extends Fragment {
         Camera camera = processCameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture, imageAnalysis);
 
         btnFlash.setOnClickListener(view -> {
-            processCameraProvider.unbindAll();
+            if ( camera.getCameraInfo().hasFlashUnit() ) {
+                camera.getCameraControl().enableTorch(!lightOn);
+                lightOn = !lightOn;
+            } else {
+                Toast.makeText(getActivity(), "Your phone doesn't have a flash light", Toast.LENGTH_SHORT).show();
+            }
 
         });
 
@@ -174,11 +181,18 @@ public class QrScanFragment extends Fragment {
 
     public static class MyImageAnalyzer implements ImageAnalysis.Analyzer {
         private final FragmentManager fragmentManager;
-        private final resurl_url bd;
+        private final urlScanResult rUrl;
+        private final wifiScanResult rWifi;
+        private final textScanResult rText;
+        private final contactScanResult rContact;
 
         public MyImageAnalyzer(FragmentManager fragmentManager) {
             this.fragmentManager = fragmentManager;
-            bd = new resurl_url();
+            rUrl = new urlScanResult();
+            rWifi = new wifiScanResult();
+            rText = new textScanResult();
+            rContact = new contactScanResult();
+
         }
 
         @Override
@@ -225,12 +239,22 @@ public class QrScanFragment extends Fragment {
                         String ssid = Objects.requireNonNull(barcode.getWifi()).getSsid();
                         String password = barcode.getWifi().getPassword();
                         int type = barcode.getWifi().getEncryptionType();
+                        String security;
+                        if(type == 1) security = "None";
+                        else if(type == 2) security ="WPA/WPA2";
+                        else security = "WEP";
+                        if (!rWifi.isAdded()) {
+                            rWifi.show(fragmentManager, "WIFI BARCODE SCANNED");
+                        }
+                        rWifi.fetchWifiName(ssid);
+                        rWifi.fetchWifiType(security);
+                        rWifi.fetchWifiPassword(password);
                         break;
                     case Barcode.TYPE_URL:
-                        if (!bd.isAdded()) {
-                            bd.show(fragmentManager, "URL BARCODE SCANNED");
+                        if (!rUrl.isAdded()) {
+                            rUrl.show(fragmentManager, "URL BARCODE SCANNED");
                         }
-                        bd.fetchUrl(Objects.requireNonNull(barcode.getUrl()).getUrl());
+                        rUrl.fetchUrl(Objects.requireNonNull(barcode.getUrl()).getUrl());
                         break;
                     case Barcode.TYPE_CALENDAR_EVENT:
                         break;
@@ -241,7 +265,26 @@ public class QrScanFragment extends Fragment {
                         break;
                     case Barcode.TYPE_TEXT:
                         String text = barcode.getDisplayValue();
+                        if (!rText.isAdded()) {
+                            rText.show(fragmentManager, "TEXT BARCODE SCANNED");
+                        }
+                        rText.fetchText(text);
                         break;
+                    case Barcode.TYPE_CONTACT_INFO:
+                        String name = Objects.requireNonNull(Objects.requireNonNull(barcode.getContactInfo()).getName()).getFormattedName();
+                        String address1 = Arrays.toString(barcode.getContactInfo().getAddresses().get(0).getAddressLines()) ;
+                        String company = Objects.requireNonNull(barcode.getContactInfo().getOrganization());
+                        String phone = barcode.getContactInfo().getPhones().get(0).getNumber();
+                        String email = barcode.getContactInfo().getEmails().get(0).getAddress();
+                        if (!rContact.isAdded()) {
+                            rContact.show(fragmentManager, "CONTACT BARCODE SCANNED");
+                        }
+                        rContact.fetchName(name);
+                        rContact.fetchPhone(phone);
+                        rContact.fetchEmail(email);
+                        rContact.fetchAddress(address1);
+                        rContact.fetchCompany(company);
+
                 }
             }
         }
