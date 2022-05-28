@@ -46,6 +46,8 @@
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/email_scan_result.xml" value="0.2932877297990594" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.25" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history_create.xml" value="0.2975630611372381" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history_scan.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_qrcodescan.xml" value="0.15220179563916203" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_scan.xml" value="0.33" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_setting.xml" value="0.25" />

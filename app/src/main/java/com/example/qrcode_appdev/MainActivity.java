@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         setupViewPager();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.view_pager, scanFragment).commit(); //set the begin fragment to scan
-        bottomNavigationView.setSelectedItemId(R.id.action_scan); //set the begin tab to scan
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
