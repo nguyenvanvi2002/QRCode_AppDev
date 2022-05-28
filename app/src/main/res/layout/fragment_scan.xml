@@ -72,17 +72,16 @@
                 android:id="@+id/flash"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/image"
+                android:layout_alignEnd="@+id/image"
+                android:layout_marginBottom="80dp"
                 android:drawableTop="@drawable/ic_flashlight_on"
                 android:fontFamily="arial"
                 android:text="Đèn pin"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textStyle="bold"
-                app:iconPadding="0dp"
-                android:layout_above="@+id/image"
-                android:layout_alignEnd="@+id/image"
-                android:layout_marginBottom="80dp"
                 android:theme="@style/Button.Main"
-                />
+                app:iconPadding="0dp" />
 
             <Button
                 android:id="@+id/btnPhoto_library"

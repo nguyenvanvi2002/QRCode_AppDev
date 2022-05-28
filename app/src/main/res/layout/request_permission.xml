@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+
+            <RelativeLayout
+                android:id="@+id/frame_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/background_fragment"
+                android:paddingBottom="20dp">
+
+
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="Tại sao chúng tôi cần sự cho phép ?"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:color="#222221"
+                    android:gravity="center_horizontal"
+                    android:text="Cần có sự cho phép của máy ảnh để quét mã QR/mã vạch"
+                    android:textAllCaps="false"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/allow"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/txt_explain"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/background_button_corner_1"
+                    android:gravity="center"
+                    android:text="Cho phép"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_denny"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/allow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Hủy bỏ"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
