@@ -43,7 +43,9 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
@@ -185,6 +187,10 @@ public class QrScanFragment extends Fragment {
         private final wifiScanResult rWifi;
         private final textScanResult rText;
         private final contactScanResult rContact;
+        private final eventScanResult rEvent;
+        private final smsScanResult rSMS;
+        private final phoneNumberScanResult rPhone;
+
 
         public MyImageAnalyzer(FragmentManager fragmentManager) {
             this.fragmentManager = fragmentManager;
@@ -192,6 +198,9 @@ public class QrScanFragment extends Fragment {
             rWifi = new wifiScanResult();
             rText = new textScanResult();
             rContact = new contactScanResult();
+            rEvent = new eventScanResult();
+            rSMS = new smsScanResult();
+            rPhone = new phoneNumberScanResult();
 
         }
 
@@ -257,6 +266,19 @@ public class QrScanFragment extends Fragment {
                         rUrl.fetchUrl(Objects.requireNonNull(barcode.getUrl()).getUrl());
                         break;
                     case Barcode.TYPE_CALENDAR_EVENT:
+                        String title = barcode.getCalendarEvent().getStatus();
+                        String content = barcode.getCalendarEvent().getSummary();
+                        Barcode.CalendarDateTime startDay = barcode.getCalendarEvent().getStart();
+//                        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+//                        String date = format1.format(startDay);
+                        if (!rEvent.isAdded()) {
+                            rEvent.show(fragmentManager, "EVENT BARCODE SCANNED");
+                        }
+                        rEvent.fetchTitle(title);
+                        rEvent.fetchContent(content);
+                        rEvent.fetchStarDay("14/5/2020");
+                        rEvent.fetchEndDay("20/5/2020");
+
                         break;
                     case Barcode.TYPE_EMAIL:
                         String address = Objects.requireNonNull(barcode.getEmail()).getAddress();
@@ -284,6 +306,23 @@ public class QrScanFragment extends Fragment {
                         rContact.fetchEmail(email);
                         rContact.fetchAddress(address1);
                         rContact.fetchCompany(company);
+                        break;
+                    case Barcode.TYPE_SMS:
+                        String sms = barcode.getSms().getMessage();
+                        String phone1 = barcode.getSms().getPhoneNumber();
+                        if (!rSMS.isAdded()) {
+                            rSMS.show(fragmentManager, "SMS BARCODE SCANNED");
+                        }
+                        rSMS.fetchPhone(phone1);
+                        rSMS.fetchContent(sms);
+                        break;
+                    case Barcode.TYPE_PHONE:
+                        String phone2 = barcode.getPhone().getNumber();
+                        if (!rPhone.isAdded()) {
+                            rPhone.show(fragmentManager, "PHONE BARCODE SCANNED");
+                        }
+                        rPhone.fetchPhone(phone2);
+                        break;
 
                 }
             }

@@ -38,7 +38,7 @@ public class contactScanResult extends BottomSheetDialogFragment {
 
         contact_name.setText(name);
         contact_phone.setText(phone);
-        contact_email.setText(address);
+        contact_email.setText(email);
         contact_address.setText(address);
         contact_company.setText(company);
 
