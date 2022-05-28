@@ -6,6 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.TextView;
+>>>>>>> origin/master
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -52,6 +56,9 @@ public class CreateQRContact extends Fragment {
         return view;
     }
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/master

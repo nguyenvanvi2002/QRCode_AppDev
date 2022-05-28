@@ -85,11 +85,10 @@ public class QrScanFragment extends Fragment {
         cameraProviderFuture.addListener(() -> {
             try {
                 if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.CAMERA) != (PackageManager.PERMISSION_GRANTED)) {
-                    ActivityCompat.requestPermissions(requireActivity(), new String[] {Manifest.permission.CAMERA}, 101);
+                    ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.CAMERA}, 101);
                 }
                 ProcessCameraProvider processCameraProvider = cameraProviderFuture.get();
                 bindPreview(processCameraProvider);
-
 
 
             } catch (ExecutionException | InterruptedException e) {
@@ -103,11 +102,11 @@ public class QrScanFragment extends Fragment {
     @SuppressWarnings("deprecation")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == 101 && grantResults.length >0) {
+        if (requestCode == 101 && grantResults.length > 0) {
             ProcessCameraProvider processCameraProvider = null;
             try {
                 processCameraProvider = cameraProviderFuture.get();
-            } catch ( InterruptedException | ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
         }
@@ -119,12 +118,12 @@ public class QrScanFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode==GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
+        if (requestCode == GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
             assert data != null;
             Uri selectedImage = data.getData();
             Bitmap bitmap;
             try {
-                bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getApplicationContext().getContentResolver() , selectedImage);
+                bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getApplicationContext().getContentResolver(), selectedImage);
                 InputImage image = InputImage.fromBitmap(bitmap, 0);
                 BarcodeScannerOptions options =
                         new BarcodeScannerOptions.Builder()
@@ -164,7 +163,7 @@ public class QrScanFragment extends Fragment {
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build();
 
-        imageAnalysis.setAnalyzer(cameraExecutor,analyzer);
+        imageAnalysis.setAnalyzer(cameraExecutor, analyzer);
 
         Camera camera = processCameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture, imageAnalysis);
 
@@ -282,7 +281,7 @@ public class QrScanFragment extends Fragment {
                         break;
                     case Barcode.TYPE_EMAIL:
                         String address = Objects.requireNonNull(barcode.getEmail()).getAddress();
-                        String subject= barcode.getEmail().getSubject();
+                        String subject = barcode.getEmail().getSubject();
                         String body = barcode.getEmail().getBody();
                         break;
                     case Barcode.TYPE_TEXT:
@@ -335,7 +334,7 @@ public class QrScanFragment extends Fragment {
         ProcessCameraProvider processCameraProvider = null;
         try {
             processCameraProvider = cameraProviderFuture.get();
-        } catch ( InterruptedException | ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         processCameraProvider.unbindAll();
@@ -347,7 +346,7 @@ public class QrScanFragment extends Fragment {
         ProcessCameraProvider processCameraProvider = null;
         try {
             processCameraProvider = cameraProviderFuture.get();
-        } catch ( InterruptedException | ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 

@@ -1,4 +1,6 @@
 package com.example.qrcode_appdev;
 
-public class CreateQREvent {
+import androidx.fragment.app.Fragment;
+
+public class CreateQREvent extends Fragment {
 }
