@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         mViewPager = findViewById(R.id.view_pager);
-
-        //setupViewPager();
+        getSupportFragmentManager().beginTransaction().replace(R.id.view_pager, scanFragment).commit();
+        bottomNavigationView.setSelectedItemId(R.id.action_scan);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
