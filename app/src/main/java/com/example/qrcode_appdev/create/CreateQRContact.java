@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.create;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.qrcode_appdev.R;
+import com.example.qrcode_appdev.create.ResultCreate;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;

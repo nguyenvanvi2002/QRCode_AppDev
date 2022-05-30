@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.create;
 
 import androidx.fragment.app.Fragment;
 

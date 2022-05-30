@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.scanner;
 
 
 import android.content.Context;
@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.qrcode_appdev.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.concurrent.ExecutorService;

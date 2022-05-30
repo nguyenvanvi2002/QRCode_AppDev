@@ -1,5 +1,4 @@
-
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.create;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,21 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.qrcode_appdev.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
-public class CreateQREmail extends Fragment {
+public class CreateQRSms extends Fragment {
+
     Button back;
     Button crea;
-    EditText editEmail,editContent, editSubject;
+    EditText editPhone;
+    EditText editSms;
     ResultCreate resultCreate;
 
     @Override
@@ -30,19 +31,16 @@ public class CreateQREmail extends Fragment {
         View view = inflater.inflate(R.layout.create_url, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
         crea = (Button) view.findViewById(R.id.btnCreate);
-        editEmail = view.findViewById(R.id.editTextName);
-        editContent = view.findViewById(R.id.editTextContent);
-        editSubject= view.findViewById(R.id.editTextSubject);
+        editPhone = view.findViewById(R.id.editTextPhone);
+        editSms = view.findViewById(R.id.editTextSms);
 
         back.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
 
         crea.setOnClickListener(view12 -> {
-            String email = "MATMSG:TO:" + editEmail.getText().toString().trim()
-                    + ";SUB:" + editSubject.getText().toString().trim()
-                    + ";BODY:" + editContent.getText().toString() + ";;";
+            String sms = "SMSTO:" + editPhone.getText().toString().trim() + ":" + editSms.getText().toString().trim();
             MultiFormatWriter writer = new MultiFormatWriter();
             try {
-                BitMatrix matrix = writer.encode(email, BarcodeFormat.QR_CODE, 260,260);
+                BitMatrix matrix = writer.encode(sms, BarcodeFormat.QR_CODE, 260,260);
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -54,7 +52,6 @@ public class CreateQREmail extends Fragment {
         });
         return view;
     }
-
 }
 
 

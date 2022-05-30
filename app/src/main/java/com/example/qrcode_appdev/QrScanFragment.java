@@ -34,6 +34,13 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.qrcode_appdev.scanner.contactScanResult;
+import com.example.qrcode_appdev.scanner.eventScanResult;
+import com.example.qrcode_appdev.scanner.phoneNumberScanResult;
+import com.example.qrcode_appdev.scanner.smsScanResult;
+import com.example.qrcode_appdev.scanner.textScanResult;
+import com.example.qrcode_appdev.scanner.urlScanResult;
+import com.example.qrcode_appdev.scanner.wifiScanResult;
 import com.google.android.gms.tasks.Task;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.vision.barcode.BarcodeScanner;
@@ -43,9 +50,7 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;

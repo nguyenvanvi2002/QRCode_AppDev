@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.create;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,23 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.qrcode_appdev.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
-public class CreateQRSms extends Fragment {
+class CreateQRUrl extends Fragment {
 
     Button back;
-    Button crea;
-    EditText editPhone;
-    EditText editSms;
+    Button creat;
+    EditText editUrl;
     ResultCreate resultCreate;
 
     @Override
@@ -30,17 +29,15 @@ public class CreateQRSms extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.create_url, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
-        crea = (Button) view.findViewById(R.id.btnCreate);
-        editPhone = view.findViewById(R.id.editTextPhone);
-        editSms = view.findViewById(R.id.editTextSms);
-
+        creat = (Button) view.findViewById(R.id.btnCreate);
+        editUrl = view.findViewById(R.id.editTextURL);
         back.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
 
-        crea.setOnClickListener(view12 -> {
-            String sms = "SMSTO:" + editPhone.getText().toString().trim() + ":" + editSms.getText().toString().trim();
+        creat.setOnClickListener(view12 -> {
+            String txt = editUrl.getText().toString().trim();
             MultiFormatWriter writer = new MultiFormatWriter();
             try {
-                BitMatrix matrix = writer.encode(sms, BarcodeFormat.QR_CODE, 260,260);
+                BitMatrix matrix = writer.encode(txt, BarcodeFormat.QR_CODE, 260,260);
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

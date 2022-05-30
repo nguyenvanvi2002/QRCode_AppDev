@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.create;
 
 import android.app.Activity;
 import android.content.Context;
