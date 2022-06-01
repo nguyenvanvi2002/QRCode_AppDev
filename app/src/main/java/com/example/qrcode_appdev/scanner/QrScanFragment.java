@@ -195,6 +195,7 @@ public class QrScanFragment extends Fragment {
         private final eventScanResult rEvent;
         private final smsScanResult rSMS;
         private final phoneNumberScanResult rPhone;
+        private final emailScanResult rEmail;
 
 
         public MyImageAnalyzer(FragmentManager fragmentManager) {
@@ -206,6 +207,7 @@ public class QrScanFragment extends Fragment {
             rEvent = new eventScanResult();
             rSMS = new smsScanResult();
             rPhone = new phoneNumberScanResult();
+            rEmail = new emailScanResult();
 
         }
 
@@ -273,22 +275,30 @@ public class QrScanFragment extends Fragment {
                     case Barcode.TYPE_CALENDAR_EVENT:
                         String title = barcode.getCalendarEvent().getStatus();
                         String content = barcode.getCalendarEvent().getSummary();
+                        String day = barcode.getCalendarEvent().getStart().toString();
                         Barcode.CalendarDateTime startDay = barcode.getCalendarEvent().getStart();
-//                        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-//                        String date = format1.format(startDay);
+                        String start = startDay.getDay() + "/" + startDay.getMonth()+"/"+ startDay.getYear();
+                        Barcode.CalendarDateTime endDay = barcode.getCalendarEvent().getEnd();
+                        String end = endDay.getDay() + "/" + endDay.getMonth()+"/"+ endDay.getYear();
                         if (!rEvent.isAdded()) {
                             rEvent.show(fragmentManager, "EVENT BARCODE SCANNED");
                         }
                         rEvent.fetchTitle(title);
                         rEvent.fetchContent(content);
-                        rEvent.fetchStarDay("14/5/2020");
-                        rEvent.fetchEndDay("20/5/2020");
+                        rEvent.fetchStarDay(start);
+                        rEvent.fetchEndDay(end);
 
                         break;
                     case Barcode.TYPE_EMAIL:
                         String address = Objects.requireNonNull(barcode.getEmail()).getAddress();
                         String subject = barcode.getEmail().getSubject();
                         String body = barcode.getEmail().getBody();
+                        if (!rEmail.isAdded()) {
+                            rEmail.show(fragmentManager, "EMAIL BARCODE SCANNED");
+                        }
+                        rEmail.fetchTiltle(address);
+                        rEmail.fetchSub(subject);
+                        rEmail.fetchContent(body);
                         break;
                     case Barcode.TYPE_TEXT:
                         String text = barcode.getDisplayValue();
