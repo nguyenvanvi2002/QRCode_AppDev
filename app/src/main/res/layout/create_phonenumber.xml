@@ -95,7 +95,7 @@
                     android:layout_height="5dp" />
 
                 <EditText
-                    android:id="@+id/editTextURL"
+                    android:id="@+id/editPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#D8D8DA"

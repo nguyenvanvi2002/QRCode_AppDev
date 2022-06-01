@@ -13,4 +13,9 @@
     <string name="phone_call">Gọi điện</string>
     <string name="located">Vị trí</string>
     <string name="add_contact">Thêm vào liên hệ</string>
+    <string-array name="string_wifi_type">
+        <item>None</item>
+        <item>WPA/WPA2</item>
+        <item>WEP</item>
+    </string-array>
 </resources>

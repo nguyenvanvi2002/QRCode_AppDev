@@ -1,16 +1,13 @@
 package com.example.qrcode_appdev;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.qrcode_appdev.create.CreateFragment;
+import com.example.qrcode_appdev.scanner.QrScanFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 

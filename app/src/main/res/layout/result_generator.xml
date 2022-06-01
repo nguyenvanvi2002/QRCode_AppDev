@@ -46,16 +46,17 @@
             android:text="SAVE"
             android:textSize="20dp"
             android:theme="@style/Button.Main" />
+
         <Button
             android:id="@+id/btnShare"
             android:layout_width="130dp"
             android:layout_height="60dp"
-            android:background="@drawable/background_button_corner_2"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="240dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_button_corner_2"
             android:text="SHARE"
             android:textSize="20dp"
-            android:theme="@style/Button.Main"/>
+            android:theme="@style/Button.Main" />
     </RelativeLayout>
 
 

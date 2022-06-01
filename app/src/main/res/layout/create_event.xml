@@ -72,15 +72,17 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_marginTop="240dp">
+
         <ScrollView
             android:id="@+id/scrollView1"
             android:layout_width="350dp"
-            android:layout_height="350dp"
+            android:layout_height="400dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="18dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="15dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -103,7 +105,7 @@
                     android:layout_height="5dp" />
 
                 <EditText
-                    android:id="@+id/editTextURL"
+                    android:id="@+id/editTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#D8D8DA"
@@ -113,7 +115,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="15dp"/>
+                    android:layout_height="15dp" />
 
                 <TextView
                     android:id="@+id/btnStart"
@@ -123,6 +125,16 @@
                     android:text="Bắt đầu"
                     android:textColor="@color/black"
                     android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/startday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:minHeight="48dp" />
+
+
                 <ImageView
                     android:id="@+id/btnLine2"
                     android:layout_width="wrap_content"
@@ -130,14 +142,24 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
                     android:src="@drawable/line" />
+
                 <TextView
                     android:id="@+id/btnFinish"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
                     android:text="Kết thúc"
-                    android:textSize="18dp"/>
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/endday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:ems="10"
+                    android:inputType="date" />
+
                 <ImageView
                     android:id="@+id/btnLine3"
                     android:layout_width="wrap_content"

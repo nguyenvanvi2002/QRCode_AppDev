@@ -3,65 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable-v24/ic_qr_true.xml" value="0.271" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/background_button_corner_1.xml" value="0.2765" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/background_button_corner_2.xml" value="0.2765" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/background_button_corner_3.xml" value="0.2765" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/background_button_corrner_4.xml" value="0.2765" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_arrow_back.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_browser.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_card.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_contact.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_email.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_event.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_flashlight_on.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_phone.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_phone_1.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_photo_library.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_share.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_sms.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_text.xml" value="0.277" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_tick.xml" value="0.2765" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_url.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_wifi.xml" value="0.186" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_wifi_maincolor.xml" value="0.218" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/drawable/ic_wifi_white.xml" value="0.218" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/activity_main.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_card.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_contact.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_email.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_event.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_phonenumber.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_sms.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_text.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_url.xml" value="0.25" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_url1.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/create_wifi.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/fragment_create.xml" value="0.33" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/fragment_history.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/fragment_scan.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/fragment_setting.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/layout_xml.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/request_permission.xml" value="0.3451086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_card.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_contact.xml" value="0.23777173913043478" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_email.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_event.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_generator.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_phonenumber.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_sms.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_text.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_url.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/result_wifi.xml" value="0.2826086956521739" />
-        <entry key="..\:/Users/Win10/AndroidStudioProjects/QRCode_AppDev1/app/src/main/res/layout/tutorial.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_1.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_2.xml" value="0.245" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_3.xml" value="0.1725" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_button_corner_4.xml" value="0.204" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_camera.xml" value="0.1925" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_circle.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/background_fragment.xml" value="0.245" />
@@ -80,32 +26,25 @@
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/background_button.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/bottom_dialog.xml" value="0.16" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_card.xml" value="0.21034630183839248" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_contact.xml" value="0.21034630183839248" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_contact.xml" value="0.25" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_email.xml" value="0.15220179563916203" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_event.xml" value="0.33" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_phonenumber.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_sms.xml" value="0.2860196665241556" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_text.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_url.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_wifi.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.22" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_event.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_phonenumber.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_sms.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_text.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_url.xml" value="0.10279983284580026" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/create_wifi.xml" value="0.25" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_create.xml" value="0.1513467293715263" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history.xml" value="0.1513467293715263" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history_create.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_history_scan.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_qrcodescan.xml" value="0.15220179563916203" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_scan.xml" value="0.33" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_setting.xml" value="0.13980333475844378" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/layout_fragment_create.xml" value="0.19880290722530997" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/layout_fragment_scan.xml" value="0.19880290722530997" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact1.xml" value="0.14065840102607952" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_email.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_generator.xml" value="0.2975630611372381" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_text.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_text1.xml" value="0.19880290722530997" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_wifi.xml" value="0.19990933816863102" />
-        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_wifi1.xml" value="0.19880290722530997" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/layout_fragment_create.xml" value="0.10279983284580026" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/request_permission.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_event.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_generator.xml" value="0.19764279238440616" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/tutorial.xml" value="0.19764279238440616" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.149" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />

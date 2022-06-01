@@ -25,21 +25,21 @@ public class CreateQRPhoneNumber extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.create_url, container, false);
+        View view = inflater.inflate(R.layout.create_phonenumber, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
         crea = (Button) view.findViewById(R.id.btnCreate);
-        editPhone = view.findViewById(R.id.editTextURL);
+        editPhone = view.findViewById(R.id.editPhone);
         back.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
 
         crea.setOnClickListener(view12 -> {
-            String txt = editPhone.getText().toString().trim();
+            String txt = "tel:"+editPhone.getText().toString().trim();
             MultiFormatWriter writer = new MultiFormatWriter();
             try {
                 BitMatrix matrix = writer.encode(txt, BarcodeFormat.QR_CODE, 260,260);
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,resultCreate).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.view_pager,resultCreate).addToBackStack(null).commit();
             } catch (WriterException e) {
                 e.printStackTrace();
             }

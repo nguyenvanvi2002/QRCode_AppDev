@@ -17,10 +17,10 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
-class CreateQRUrl extends Fragment {
+public class CreateQRUrl extends Fragment {
 
     Button back;
-    Button creat;
+    Button create;
     EditText editUrl;
     ResultCreate resultCreate;
 
@@ -29,19 +29,19 @@ class CreateQRUrl extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.create_url, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
-        creat = (Button) view.findViewById(R.id.btnCreate);
+        create = (Button) view.findViewById(R.id.btnCreate);
         editUrl = view.findViewById(R.id.editTextURL);
         back.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
 
-        creat.setOnClickListener(view12 -> {
-            String txt = editUrl.getText().toString().trim();
+        create.setOnClickListener(view12 -> {
+            String txt = "url:"+editUrl.getText().toString().trim();
             MultiFormatWriter writer = new MultiFormatWriter();
             try {
                 BitMatrix matrix = writer.encode(txt, BarcodeFormat.QR_CODE, 260,260);
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,resultCreate).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.view_pager,resultCreate).addToBackStack(null).commit();
             } catch (WriterException e) {
                 e.printStackTrace();
             }

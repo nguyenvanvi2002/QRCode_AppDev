@@ -21,22 +21,26 @@ import com.google.zxing.common.BitMatrix;
 public class CreateQRContact extends Fragment {
     Button back;
     Button crea;
-    EditText editName, editPhone, editEmail ;
+    EditText editName, editPhone,editTextAddress, editEmail,editTextCompany ;
     ResultCreate resultCreate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.create_url, container, false);
+        View view = inflater.inflate(R.layout.create_contact, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
         crea = (Button) view.findViewById(R.id.btnCreate);
         editName = view.findViewById(R.id.editTextName);
         editPhone = view.findViewById(R.id.editPhone);
         editEmail= view.findViewById(R.id.editEmail);
+        editTextAddress= view.findViewById(R.id.editTextAddress);
+        editTextCompany= view.findViewById(R.id.editTextCompany);
         back.setOnClickListener(view1 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
 
         crea.setOnClickListener(view12 -> {
-            String contact = "BEGIN:VCARD\nVERSION:3.0\nN:" + editName.getText().toString().trim()
+            String contact = "BEGIN:VCARD\nVERSION:3.0\nFN:" + editName.getText().toString().trim()
+                    +"\nORG:"+editTextCompany.getText().toString().trim()
+                    + "\nADR:"+editTextAddress.getText().toString().trim()
                     + "\nTEL;WORK;VOICE:" + editPhone.getText().toString().trim()
                     + "\nEMAIL;WORK;INTERNET:" + editEmail.getText().toString().trim()
                     + "\nEND:VCARD";
@@ -46,7 +50,7 @@ public class CreateQRContact extends Fragment {
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,resultCreate).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.view_pager,resultCreate).addToBackStack(null).commit();
             } catch (WriterException e) {
                 e.printStackTrace();
             }

@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -34,15 +36,20 @@ import java.util.Objects;
 @SuppressWarnings("ALL")
 public class ResultCreate extends Fragment {
     ImageView result;
-    ImageView share, save, close;
+    Button share, save, close;
     BitMatrix bitMatrix;
+    private boolean CHECKED = true;
 
+
+    public ResultCreate(BitMatrix bitMatrix) {
+        this.bitMatrix = bitMatrix;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.result_generator, container, false);
-        share = view.findViewById(R.id.btnShare);
+        share = view.findViewById(R.id.btn_share);
         save = view.findViewById(R.id.btnSave);
         result = view.findViewById(R.id.imgResult);
         close = view.findViewById(R.id.btnBack);
@@ -52,7 +59,7 @@ public class ResultCreate extends Fragment {
         result.setImageBitmap(bitmap);
 
         save.setOnClickListener(view14 -> {
-            //ActivityCompat.requestPermissions(requireActivity() , new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+//            ActivityCompat.requestPermissions(requireActivity() , new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             try {
                 if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != (PackageManager.PERMISSION_GRANTED)) {
                     ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
@@ -79,36 +86,35 @@ public class ResultCreate extends Fragment {
 
 
         });
-        share.setOnClickListener(view1 -> {
-            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-            StrictMode.setVmPolicy(builder.build());
-
-            File f = new File(requireActivity().getExternalCacheDir() + "/" + getResources().getString(R.string.app_name) + ".png");
-            Intent intent;
-
-            try {
-                FileOutputStream outputStream = new FileOutputStream(f);
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
-
-                outputStream.flush();
-                outputStream.close();
-                intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(f));
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-
-            startActivity(Intent.createChooser(intent, "share"));
-        });
+//        share.setOnClickListener(view1 -> {
+//            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+//            StrictMode.setVmPolicy(builder.build());
+//
+//            File f = new File(requireActivity().getExternalCacheDir() + "/" + getResources().getString(R.string.app_name) + ".png");
+//            Intent intent;
+//
+//            try {
+//                FileOutputStream outputStream = new FileOutputStream(f);
+//                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+//
+//                outputStream.flush();
+//                outputStream.close();
+//                intent = new Intent(Intent.ACTION_SEND);
+//                intent.setType("image/*");
+//                intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(f));
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//
+//
+//            } catch (Exception e) {
+//                throw new RuntimeException(e);
+//            }
+//
+//            startActivity(Intent.createChooser(intent, "share"));
+//        });
 
         close.setOnClickListener(view12 -> requireActivity().getSupportFragmentManager().popBackStackImmediate());
         return view;
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, int[] grantResults) {
@@ -117,10 +123,6 @@ public class ResultCreate extends Fragment {
         } else {
             Log.e("value", "Permission Denied, You cannot use local drive .");
         }
-    }
-
-    public ResultCreate(BitMatrix bitMatrix) {
-        this.bitMatrix = bitMatrix;
     }
 }
 

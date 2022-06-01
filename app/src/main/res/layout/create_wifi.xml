@@ -14,6 +14,7 @@
         android:layout_marginTop="15dp"
         android:background="@color/black"
         android:drawableLeft="@drawable/ic_arrow_back" />
+
     <Button
         android:id="@+id/btnCreate"
         android:layout_width="wrap_content"
@@ -21,10 +22,10 @@
         android:layout_marginLeft="320dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/background_button_corner_2"
-        android:textSize="20dp"
         android:text="Tạo"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/btnLine"
@@ -33,8 +34,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
         android:background="@color/system" />
-
-
 
 
     <RelativeLayout
@@ -83,14 +82,15 @@
             android:textColor="@color/black"
             android:textSize="18dp" />
 
-        <ImageView
-            android:id="@+id/btnLine1"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/wifi_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="240dp"
-            android:src="@drawable/line"
-            />
+            android:layout_below="@id/btnName"
+            android:background="#D8D8DA"
+            android:minHeight="48dp"
+            android:textSize="25dp" />
+
         <TextView
             android:id="@+id/btnType"
             android:layout_width="wrap_content"
@@ -100,6 +100,15 @@
             android:text="Loại bảo mật"
             android:textColor="@color/black"
             android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/wifi_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnType"
+            android:background="#D8D8DA"
+            android:minHeight="48dp" />
+
         <TextView
             android:id="@+id/password"
             android:layout_width="wrap_content"
@@ -110,19 +119,14 @@
             android:textColor="@color/black"
             android:textSize="18dp" />
 
-        <ImageView
-            android:id="@+id/btnLine2"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/wifi_password"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="440dp"
-            android:src="@drawable/line"
-            />
+            android:layout_below="@id/password"
+            android:background="#D8D8DA"
+            android:minHeight="48dp"
+            android:textSize="25dp" />
+
     </RelativeLayout>
-
 </RelativeLayout>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/master

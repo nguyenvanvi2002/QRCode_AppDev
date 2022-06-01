@@ -28,7 +28,7 @@ public class CreateQRSms extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.create_url, container, false);
+        View view = inflater.inflate(R.layout.create_sms, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
         crea = (Button) view.findViewById(R.id.btnCreate);
         editPhone = view.findViewById(R.id.editTextPhone);
@@ -44,7 +44,7 @@ public class CreateQRSms extends Fragment {
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,resultCreate).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.view_pager,resultCreate).addToBackStack(null).commit();
             } catch (WriterException e) {
                 e.printStackTrace();
             }

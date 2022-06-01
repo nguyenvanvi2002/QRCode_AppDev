@@ -96,7 +96,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editTextMessage"
+                    android:id="@+id/editTextText"
                     android:layout_width="375dp"
                     android:layout_height="177dp"
                     android:layout_below="@+id/liner"

@@ -27,10 +27,10 @@ public class CreateQREmail extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.create_url, container, false);
+        View view = inflater.inflate(R.layout.create_email, container, false);
         back = (Button) view.findViewById(R.id.btnBack);
         crea = (Button) view.findViewById(R.id.btnCreate);
-        editEmail = view.findViewById(R.id.editTextName);
+        editEmail = view.findViewById(R.id.editTextEmailL);
         editContent = view.findViewById(R.id.editTextContent);
         editSubject= view.findViewById(R.id.editTextSubject);
 
@@ -39,14 +39,14 @@ public class CreateQREmail extends Fragment {
         crea.setOnClickListener(view12 -> {
             String email = "MATMSG:TO:" + editEmail.getText().toString().trim()
                     + ";SUB:" + editSubject.getText().toString().trim()
-                    + ";BODY:" + editContent.getText().toString() + ";;";
+                    + ";BODY:" + editContent.getText().toString().trim() + ";;";
             MultiFormatWriter writer = new MultiFormatWriter();
             try {
                 BitMatrix matrix = writer.encode(email, BarcodeFormat.QR_CODE, 260,260);
                 resultCreate = new ResultCreate(matrix);
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container,resultCreate).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.view_pager,resultCreate).addToBackStack(null).commit();
             } catch (WriterException e) {
                 e.printStackTrace();
             }

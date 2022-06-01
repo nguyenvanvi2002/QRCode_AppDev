@@ -1,4 +1,4 @@
-package com.example.qrcode_appdev;
+package com.example.qrcode_appdev.scanner;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -34,6 +34,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.qrcode_appdev.R;
 import com.example.qrcode_appdev.scanner.contactScanResult;
 import com.example.qrcode_appdev.scanner.eventScanResult;
 import com.example.qrcode_appdev.scanner.phoneNumberScanResult;
