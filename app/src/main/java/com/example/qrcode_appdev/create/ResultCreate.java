@@ -77,6 +77,7 @@ public class ResultCreate extends Fragment {
                         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
                         Objects.requireNonNull(fos);
                     }
+
                     Toast.makeText(requireActivity(), "Save successfully", Toast.LENGTH_LONG).show();
 
                 }

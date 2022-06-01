@@ -84,7 +84,7 @@ public class wifiScanResult extends BottomSheetDialogFragment {
             @RequiresApi(api = Build.VERSION_CODES.S)
             @Override
             public void onClick(View view) {
-                WifiManager wifi = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
+                WifiManager wifi = (WifiManager) getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 if(wifi.isWifiEnabled()){
 
                     ConnectToNetworkWEP(fetchName, fetchPassword);
@@ -131,7 +131,7 @@ public class wifiScanResult extends BottomSheetDialogFragment {
             wifiConfig.SSID = String.format("\"%s\"", networkSSID);
             wifiConfig.preSharedKey = String.format("\"%s\"", password);
 
-            WifiManager wifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
+            WifiManager wifiManager = (WifiManager) getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
             int netId = wifiManager.addNetwork(wifiConfig);
             wifiManager.disconnect();

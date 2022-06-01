@@ -27,7 +27,7 @@ public class phoneNumberScanResult extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.result_text, container, false);
+        View view = inflater.inflate(R.layout.result_phone_number, container, false);
         phone_number = view.findViewById(R.id.phone_number);
         phone_number.setText(phone);
         btn_copy = view.findViewById(R.id.btn_copy);
