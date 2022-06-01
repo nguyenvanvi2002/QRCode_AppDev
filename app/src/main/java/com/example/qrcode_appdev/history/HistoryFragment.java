@@ -32,6 +32,7 @@ public class HistoryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         tabLayout = view.findViewById(R.id.tab_layout);
         viewPager = view.findViewById(R.id.view_pager_history);
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.main_color));
 
         VPAdapter vpAdapter = new VPAdapter(getFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(vpAdapter);
