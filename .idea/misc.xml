@@ -22,6 +22,7 @@
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library.xml" value="0.2995" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_photo_library_white.xml" value="0.245" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_share.xml" value="0.245" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/drawable/ic_url.xml" value="0.238" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/font/main_font.xml" value="0.3223599828986746" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/background_button.xml" value="0.2975630611372381" />
@@ -40,6 +41,8 @@
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_scan.xml" value="0.33" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/fragment_setting.xml" value="0.13980333475844378" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/layout_fragment_create.xml" value="0.10279983284580026" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/layout_fragment_scan.xml" value="0.21034630183839248" />
+        <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/one_line_item.xml" value="0.2" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/request_permission.xml" value="0.19764279238440616" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_contact.xml" value="0.19764279238440616" />
         <entry key="..\:/Users/nguye/Desktop/@Project/app/src/main/res/layout/result_email.xml" value="0.21034630183839248" />

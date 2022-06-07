@@ -35,6 +35,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.qrcode_appdev.R;
+import com.example.qrcode_appdev.history.QrModel;
 import com.example.qrcode_appdev.scanner.contactScanResult;
 import com.example.qrcode_appdev.scanner.eventScanResult;
 import com.example.qrcode_appdev.scanner.phoneNumberScanResult;
@@ -242,6 +243,8 @@ public class QrScanFragment extends Fragment {
         }
 
         private void readerBarcodeData(List<Barcode> barcodes) {
+            QrModel qrModel;
+            String date = android.text.format.DateFormat.format("kk:mm:ss, dd-MM-yyyy", new java.util.Date()).toString();
             for (Barcode barcode : barcodes) {
                 Rect bounds = barcode.getBoundingBox();
                 Point[] corners = barcode.getCornerPoints();
@@ -271,6 +274,8 @@ public class QrScanFragment extends Fragment {
                             rUrl.show(fragmentManager, "URL BARCODE SCANNED");
                         }
                         rUrl.fetchUrl(Objects.requireNonNull(barcode.getUrl()).getUrl());
+                        String url = Objects.requireNonNull(barcode.getUrl()).getUrl();
+                        qrModel = new QrModel(4, date, url, url);
                         break;
                     case Barcode.TYPE_CALENDAR_EVENT:
                         String title = barcode.getCalendarEvent().getStatus();
@@ -306,6 +311,7 @@ public class QrScanFragment extends Fragment {
                             rText.show(fragmentManager, "TEXT BARCODE SCANNED");
                         }
                         rText.fetchText(text);
+                        qrModel = new QrModel(5, date, text, text);
                         break;
                     case Barcode.TYPE_CONTACT_INFO:
                         String name = Objects.requireNonNull(Objects.requireNonNull(barcode.getContactInfo()).getName()).getFormattedName();
